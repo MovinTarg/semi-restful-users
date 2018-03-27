@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>View</title>
+        {% load static %}
+        <link rel="stylesheet" types="text/css" href="{% static "semi_restful_users/style.css" %}">
+    </head>
+    <body>
+        <div id='container'>
+            <h1>User {{ user.id }}</h1>
+            <p>Full Name: {{ user.first_name }} {{ user.last_name }}</p>
+            <p>Email: {{ user.email }}</p>
+            <p>Created at: {{ user.created_at }}</p>
+            <p><a href="/users/{{ user.id }}/edit">Edit</a> | <a href="/users/{{ user.id }}/destroy">Delete</a></p>
+        </div>
+    </body>
+</html>
